@@ -1,134 +1,37 @@
-/* ProductDetails.css */
+.application-container {
+  /* Add any necessary container styles */
+}
 
-/* Default Light Mode */
-body {
-    background-color: #fff; /* Set default background color */
-    color: #333; /* Set default text color */
-  }
-  
-  .toggle-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    padding: 8px 12px;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .toggle-button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Use moon icon as default */
-  .toggle-button img {
-    width: 24px;
-    height: 24px;
-    background-image: url('./moon-icon.png'); /* Replace with your moon icon path */
-    background-size: cover;
-  }
-  
-  /* Use sun icon for dark mode */
-  .dark-mode .toggle-button img {
-    background-image: url('sun-icon.png'); /* Replace with your sun icon path */
-  }
-  
-  /* Dark Mode */
-  .dark-mode {
-    background-color: #333;
-    color: #fff;
-  }
-  
-  .dark-mode h2,
-  .dark-mode p {
-    color: #fff; /* Set text color to white in dark mode */
-  }
-  
-  .dark-mode .detailed-content {
-    background-color: #222; /* Darken the detailed content background in dark mode */
-    color: #fff; /* Set text color to white in dark mode */
-  }
-  
-  /* Light Mode */
-  .light-mode {
-    background-color: #fff;
-    color: #333;
-  }
-  
-  .light-mode h2,
-  .light-mode p {
-    color: #333; /* Set text color to black in light mode */
-  }
-  
-  /* Category buttons */
-  .category-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 50px;
-  }
-  
-  .category-buttons button {
-    padding: 15px 25px;
-    margin: 0 10px;
-    background-color: #ccc; /* Light grey background for all buttons */
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    color: #333;
-    font-size: 16px;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Added color transition */
-  }
-  
-  .category-buttons .specific-button {
-    background-color: #ccc; /* Light grey background for specific button */
-  }
-  
-  .category-buttons .specific-button.active {
-    background-color: #999; /* Dark grey background for active specific button */
-    color: #fff; /* Change text color to white for active specific button */
-  }
-  
-  .category-buttons button:hover {
-    background-color: #999; /* Dark grey background when hovered for all buttons */
-    color: #fff; /* Change text color to white when hovered for all buttons */
-  }
-  
-  .category-buttons .specific-button:hover {
-    background-color: #999; /* Dark grey background when hovered for specific button */
-    color: #fff; /* Change text color to white when hovered for specific button */
-  }
-  
-  /* Detailed content */
-  .detailed-content {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .detailed-content h2 {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 15px;
-  }
-  
-  .detailed-content p {
-    text-align: justify;
-    font-size: 18px;
-    line-height: 1.6;
-  }
-  
-  .detailed-content img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    height: auto;
-  }
-  
-  /* ... (other existing styles) */
-  
+.application-section {
+  position: relative;
+  margin-top: 100vh; /* To create space for the application section */
+}
+
+.circle-ball {
+  position: absolute;
+  top: 50%;
+  left: -50px; /* Initial position outside the screen */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #007bff; /* Change color as needed */
+  transition: left 0.5s ease; /* Transition for left movement */
+}
+
+.hide-heading {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.reveal-heading {
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease;
+}
